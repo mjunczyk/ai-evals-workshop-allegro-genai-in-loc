@@ -60,13 +60,13 @@ To get the most out of this hands-on session, please review the following techni
 
 #### Pre-Reading
 To make sure you are familiar with most of the concepts we will be discussing during the workshop, please take a look at the following:
-- [Offline Evaluation](https://docs.langchain.com/langsmith/evaluation)
-- [Prompt Engineering](https://docs.langchain.com/langsmith/prompt-engineering)
+* [Offline Evaluation](https://docs.langchain.com/langsmith/evaluation)
+* [Prompt Engineering](https://docs.langchain.com/langsmith/prompt-engineering)
 
 ---
 
 ## Resources
 
-- [GEMBA – GPT-based MT evaluation](https://arxiv.org/abs/2302.13823)
-- [MQM Error Typology](https://themqm.org/)
-- [OpenAI Evals framework](https://github.com/openai/evals)
+* [GEMBA – GPT-based MT evaluation](https://arxiv.org/abs/2302.13823)
+* [MQM Error Typology](https://themqm.org/)
+* [OpenAI Evals framework](https://github.com/openai/evals)
