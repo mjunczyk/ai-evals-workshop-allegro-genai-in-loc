@@ -38,21 +38,30 @@ Run a structured evaluation to score model outputs against your annotations, ide
 
 ---
 
-## Requirements
+## Workshop Prerequisites
 
-Requirement | Details
---- | ---
-Python 3.10+ | For running evaluation scripts
-Access to LangSmith | Needed for workshop exercises
-Spreadsheet tool | Google Sheets or Excel for annotation
-Git | For cloning this repository and sharing updates
+To get the most out of this hands-on session, please review the following technical setup and background knowledge criteria.
 
----
+### Operational Setup (Before the Workshop)
+* **LangSmith Access:** Check your email for an invitation to our  [LangSmith workspace](https://eu.smith.langchain.com/). Please accept the invitation and log in before the session to ensure your access works.
+* **No API Keys Needed:** Pre-configured LLM endpoints will be provided directly in the LangSmith environment.
+* **Workshop Agenda:** Familiarise yourself with the Workshop Agenda. During the workshop, you will be completing a live calibration task where you will annotate e-commerce translations based on specific Accuracy subtypes and Severity levels. Reviewing these definitions beforehand will ensure a smooth, fast-paced live session.
 
-## Getting Started
+### Knowledge Prerequisites
 
-Please make sure you can access the [LangSmith workspace](https://eu.smith.langchain.com/).
-Workshop materials and dataset templates will be added to this repository before the session.
+#### Required
+* **Localisation Context:** A basic understanding of the traditional translation workflow (segments, Translation Memories, QA processes).
+* **Conceptual AI Literacy:** Familiarity with what LLMs are and a conceptual understanding of how prompts work.
+* **Data Comfort:** Comfort viewing and basic editing of plain-text data files (CSV, .txt, .md).
+
+#### Recommended
+* **Basic Code Literacy (Python):** You do not need to write code from scratch. However, being comfortable reading a short Python script and changing a variable string or number inside the LangSmith UI will be highly beneficial.
+* **QA Frameworks:** Some familiarity with automated testing or translation quality frameworks (e.g., MQM, BLEU, DQF).
+
+#### Pre-Reading
+* To make sure you are familiar with most of the concepts we will be discussing during the workshop, please take a look at the following:
+- [Offline Evaluation](https://docs.langchain.com/langsmith/evaluation)
+- [Prompt Engineering](https://docs.langchain.com/langsmith/prompt-engineering)
 
 ---
 
