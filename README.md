@@ -17,56 +17,18 @@ By the end of the workshop you will be able to:
 
 ---
 
-## Who is this for?
-
-This workshop is designed for localisation specialists, translators, LQA reviewers and localisation engineers, as well as anyone looking to enhance their professional portfolio with hands-on AI-quality verification and evaluation skills.
-
----
-
-## Workshop Structure
-
-The workshop is divided into three stages:
-
-### 1. Dataset Annotation
-Curate and annotate an evaluation dataset by hand-labelling outputs.
-
-### 2. Prompt Experimentation
-Design and iteratively refine prompts for automatic localisation QA tasks using your annotated dataset as ground truth.
-
-### 3. Evaluation
-Run a structured evaluation to score model outputs against your annotations, identify failure modes, and plan workflow improvements.
-
----
-
 ## Getting Started
 
-To get the most out of this hands-on session, please review the following technical setup and background knowledge criteria.
+Workshop date and time: June 24, 2026, 17:10 - 19:40 CEST (UTC+2).
 
-### Operational Setup (Before the Workshop)
-* **LangSmith Access:** Check your email for an invitation to our [LangSmith workspace](https://eu.smith.langchain.com/). Please accept the invitation and log in before the session to ensure your access works.
-* **No API Keys Needed:** Pre-configured LLM endpoints will be provided directly in the LangSmith environment.
-* **Workshop Agenda:** Familiarise yourself with the [workshop agenda](docs/agenda.md). During the workshop, you will be completing a live calibration task where you will annotate e-commerce translations based on specific Accuracy subtypes and Severity levels. Reviewing these definitions beforehand will ensure a smooth, fast-paced live session.
+For the full workshop flow, section timings, materials checklist, and expected outcomes, see [Workshop Agenda](Workshop%20Agenda.md).
 
-### Knowledge Prerequisites
-
-#### Required
-* **Localisation Context:** A basic understanding of the traditional translation workflow (segments, Translation Memories, QA processes).
-* **Conceptual AI Literacy:** Familiarity with what LLMs are and a conceptual understanding of how prompts work.
-* **Data Comfort:** Comfort viewing and basic editing of plain-text data files (CSV, .txt, .md).
-
-#### Recommended
-* **Basic Code Literacy (Python):** You do not need to write code from scratch. However, being comfortable reading a short Python script and changing a variable string or number inside the LangSmith UI will be highly beneficial.
-* **QA Frameworks:** Some familiarity with automated testing or translation quality frameworks (e.g., MQM, BLEU, DQF).
-
-#### Pre-Reading
-To make sure you are familiar with most of the concepts we will be discussing during the workshop, please take a look at the following:
-* [Offline Evaluation](https://docs.langchain.com/langsmith/evaluation)
-* [Prompt Engineering](https://docs.langchain.com/langsmith/prompt-engineering)
+Please make sure you can access the [LangSmith workspace](https://eu.smith.langchain.com/) before the session.
 
 ---
 
 ## Resources
 
-* [GEMBA – GPT-based MT evaluation](https://arxiv.org/abs/2302.13823)
-* [MQM Error Typology](https://themqm.org/)
-* [OpenAI Evals framework](https://github.com/openai/evals)
+- [GEMBA – GPT-based MT evaluation](https://arxiv.org/abs/2302.13823)
+- [MQM Error Typology](https://themqm.org/)
+- [OpenAI Evals framework](https://github.com/openai/evals)
