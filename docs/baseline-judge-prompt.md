@@ -24,27 +24,25 @@ Allowed severity labels:
 
 Return exactly one primary Accuracy finding.
 
-Return valid JSON only:
+Return raw JSON only. Do not include Markdown, code fences, or extra commentary.
 
-```json
+If an Accuracy error is present, return this structure:
+
 {
   "has_accuracy_error": true,
   "accuracy_subtype": "omission",
   "severity": "major",
   "justification": "Short explanation."
 }
-```
 
-If there is no Accuracy error, return:
+If there is no Accuracy error, return this structure:
 
-```json
 {
   "has_accuracy_error": false,
   "accuracy_subtype": "none",
   "severity": "none",
   "justification": "The target preserves the meaning of the source."
 }
-```
 
 Input:
 
