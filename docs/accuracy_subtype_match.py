@@ -41,10 +41,10 @@ def _normalize_label(value):
     return str(value).strip().lower()
 
 
-def perform_eval(run):
+def perform_eval(run, example=None):
     """Score 1 when predicted Accuracy subtype matches the gold subtype."""
     outputs = run["outputs"]
-    reference_outputs = run.get("reference_outputs") or {}
+    reference_outputs = (example or {}).get("outputs") or run.get("reference_outputs") or {}
 
     predicted = _normalize_label(
         _pick(_prediction(outputs), "accuracy_subtype", "gold_accuracy_subtype")
