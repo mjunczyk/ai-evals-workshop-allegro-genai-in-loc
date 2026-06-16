@@ -22,30 +22,31 @@ Time: 17:10 - 19:40 CEST (UTC+2) (150 minutes)
 - Why evaluation matters in AI-assisted localisation
 - Overview of today’s deliverables
 
-## 2. Framework Briefing: Error Taxonomy and Severity (17:20 - 17:40, 20 min)
+## 2. Framework Briefing: Error Taxonomy and Severity (17:20 - 17:30, 10 min)
 
 - Accuracy error subtypes used during annotation
 - Severity levels and decision boundaries
 - Acceptable vs. critical translation issues
 
-## 3. Live Annotation Exercise (17:40 - 18:15, 35 min)
+## 3. Live Annotation Exercise (17:30 - 17:45, 15 min)
 
 - Group annotation of sample e-commerce segments
 - Alignment on annotation standards for the workshop
 
-## 4. Prompt Experimentation (18:15 - 18:45, 30 min)
+## 4. AI Evaluation Tool setup (17:45 - 18:25, 40 min)
 
-- Baseline prompt setup
-- Capturing prompt versions
-- Iterative prompt refinement based on annotation goals
+- LangSmith setup (dataset, baseline prompt)
+- Execute baseline experiment
 
-## 5. Evaluation Run in LangSmith (18:45 - 19:10, 25 min)
+## 5. Evaluation and Prompt Experimentation Run in LangSmith (18:25 - 19:15, 50 min)
 
 - Configure evaluation criteria and run settings
 - Execute structured evaluation
 - Review metrics and representative failures
+- Capturing prompt versions
+- Iterative prompt refinement based on annotation goals
 
-## 6. Results Review and Workflow Improvements (19:10 - 19:30, 20 min)
+## 6. Results Review and Workflow Improvements (19:15 - 19:30, 15 min)
 
 - Identify failure modes by category/severity
 - Translate findings into prompt and process improvements
