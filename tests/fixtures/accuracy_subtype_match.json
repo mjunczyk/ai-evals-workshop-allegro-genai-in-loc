@@ -1,0 +1,59 @@
+{
+  "_README": "HOW TO EDIT: Each entry under 'cases' is one test. Set 'predicted_accuracy_subtype' to what the AI judge answered and 'gold_accuracy_subtype' to the correct answer from the dataset. Set 'expected_score' to 1 if those two should count as a MATCH, or 0 if they should NOT. Valid subtypes (from docs/datasets/Czech): none, mistranslation, omission, addition, untranslated. Use null to simulate a missing/blank value. 'id', 'source' and 'target' are optional context copied from the dataset. Add or remove entries freely - you do NOT need to touch any Python code. 'name' is just a human-readable label shown in the test report.",
+  "cases": [
+    {
+      "name": "correct: none matches none (WSLQA-001)",
+      "id": "WSLQA-001",
+      "source": "Waterproof hiking backpack, 30 L",
+      "target": "Nepromokavy turisticky batoh, 30 l",
+      "predicted_accuracy_subtype": "none",
+      "gold_accuracy_subtype": "none",
+      "expected_score": 1
+    },
+    {
+      "name": "correct: mistranslation matches mistranslation (WSLQA-002)",
+      "id": "WSLQA-002",
+      "source": "Set of 4 ceramic mugs",
+      "target": "Sada 6 keramickych hrnku",
+      "predicted_accuracy_subtype": "mistranslation",
+      "gold_accuracy_subtype": "mistranslation",
+      "expected_score": 1
+    },
+    {
+      "name": "wrong subtype: judge said addition but gold is omission (WSLQA-003)",
+      "id": "WSLQA-003",
+      "source": "Free returns within 30 days",
+      "target": "Vraceni zdarma",
+      "predicted_accuracy_subtype": "addition",
+      "gold_accuracy_subtype": "omission",
+      "expected_score": 0
+    },
+    {
+      "name": "wrong subtype: judge missed the error and said none",
+      "id": "WSLQA-004",
+      "source": "Cotton baby blanket",
+      "target": "Bavlnena detska deka s kapuci",
+      "predicted_accuracy_subtype": "none",
+      "gold_accuracy_subtype": "addition",
+      "expected_score": 0
+    },
+    {
+      "name": "different letter case still matches",
+      "predicted_accuracy_subtype": "Untranslated",
+      "gold_accuracy_subtype": "untranslated",
+      "expected_score": 1
+    },
+    {
+      "name": "extra spaces are ignored",
+      "predicted_accuracy_subtype": "  mistranslation  ",
+      "gold_accuracy_subtype": "mistranslation",
+      "expected_score": 1
+    },
+    {
+      "name": "both values missing count as equal",
+      "predicted_accuracy_subtype": null,
+      "gold_accuracy_subtype": null,
+      "expected_score": 1
+    }
+  ]
+}
