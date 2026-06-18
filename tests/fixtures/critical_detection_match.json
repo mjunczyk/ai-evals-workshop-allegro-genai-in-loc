@@ -1,5 +1,5 @@
 {
-  "_README": "HOW TO EDIT: Each entry under 'cases' is one test. Set 'predicted_severity' to what the AI judge answered and 'gold_severity' to the correct answer from the dataset. This evaluator ONLY cares whether each side is 'critical' or not - so 'minor' vs 'major' both count as 'not critical'. Set 'expected_score' to 1 if both sides agree on critical-vs-not-critical, or 0 if they disagree. Valid severities (from docs/datasets/Czech): none, minor, major, critical. Use null to simulate a missing/blank value. 'id', 'source' and 'target' are optional context. Add or remove entries freely - no Python editing needed. 'name' is just a label shown in the test report.",
+  "_README": "HOW TO EDIT: Each entry under 'cases' is one test. Set 'predicted_severity' to what the AI judge answered and 'gold_severity' to the correct answer from the dataset. This evaluator is a true-positive-only metric: it scores 1 ONLY when BOTH sides are 'critical'. Any other combination (both non-critical, any mismatch, missing values) scores 0. Valid severities (from docs/datasets/Czech): none, minor, major, critical. Use null to simulate a missing/blank value. 'id', 'source' and 'target' are optional context. Add or remove entries freely - no Python editing needed. 'name' is just a label shown in the test report.",
   "cases": [
     {
       "name": "both critical -> match",
@@ -11,19 +11,19 @@
       "expected_score": 1
     },
     {
-      "name": "both non-critical (minor vs minor) -> match",
+      "name": "both non-critical (minor vs minor) -> mismatch",
       "predicted_severity": "minor",
       "gold_severity": "minor",
-      "expected_score": 1
+      "expected_score": 0
     },
     {
-      "name": "minor vs major are both non-critical -> match",
+      "name": "minor vs major are both non-critical -> mismatch",
       "id": "WSLQA-002",
       "source": "Set of 4 ceramic mugs",
       "target": "Sada 6 keramickych hrnku",
       "predicted_severity": "major",
       "gold_severity": "minor",
-      "expected_score": 1
+      "expected_score": 0
     },
     {
       "name": "judge over-flagged: predicted critical but gold is major",
@@ -44,10 +44,10 @@
       "expected_score": 1
     },
     {
-      "name": "both values missing -> both non-critical -> match",
+      "name": "both values missing -> neither is critical -> no match",
       "predicted_severity": null,
       "gold_severity": null,
-      "expected_score": 1
+      "expected_score": 0
     }
   ]
 }
