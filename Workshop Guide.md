@@ -1,6 +1,6 @@
 # Workshop Guide
 
-## Allegro x GenAI in Localisation
+## Evaluation Best Practices: Building Automated QA Pipelines for Agentic AI
 
 ## Goal of the Workshop
 

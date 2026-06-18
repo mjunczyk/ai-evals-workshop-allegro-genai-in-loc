@@ -1,6 +1,6 @@
 # Workshop Agenda
 
-## AI Evals Workshop - Allegro x GenAI in Localisation
+## Evaluation Best Practices: Building Automated QA Pipelines for Agentic AI
 
 Date: June 24, 2026
 Time: 17:10 - 19:40 CEST (UTC+2) (150 minutes)

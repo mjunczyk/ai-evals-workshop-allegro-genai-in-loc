@@ -48,8 +48,8 @@ If there is no Accuracy error, return:
 
 Input:
 
-- Source language: `{source_language}`
-- Source: `{source}`
-- Target language: `{target_language}`
-- Target: `{target}`
+- Source language: `{{source_language}}`
+- Source: `{{source}}`
+- Target language: `{{target_language}}`
+- Target: `{{target}}`
 
