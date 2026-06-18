@@ -1,0 +1,41 @@
+{
+  "_README": "HOW TO EDIT: Each entry under 'cases' is one test. Set 'predicted_severity' to what the AI judge answered and 'gold_severity' to the correct answer from the dataset. This evaluator scores 1 when predicted severity exactly matches gold severity after lowercasing and trimming whitespace. If predicted severity is missing/blank, score is always 0. Valid severities: none, minor, major, critical. Use null to simulate a missing value. 'name' is a label shown in test reports.",
+  "cases": [
+    {
+      "name": "exact match minor -> 1",
+      "predicted_severity": "minor",
+      "gold_severity": "minor",
+      "expected_score": 1
+    },
+    {
+      "name": "different severities -> 0",
+      "predicted_severity": "major",
+      "gold_severity": "minor",
+      "expected_score": 0
+    },
+    {
+      "name": "case-insensitive match -> 1",
+      "predicted_severity": "CRITICAL",
+      "gold_severity": "critical",
+      "expected_score": 1
+    },
+    {
+      "name": "trimmed match -> 1",
+      "predicted_severity": "  none  ",
+      "gold_severity": "none",
+      "expected_score": 1
+    },
+    {
+      "name": "predicted missing always 0",
+      "predicted_severity": null,
+      "gold_severity": "major",
+      "expected_score": 0
+    },
+    {
+      "name": "both missing still 0 because predicted is missing",
+      "predicted_severity": null,
+      "gold_severity": null,
+      "expected_score": 0
+    }
+  ]
+}
