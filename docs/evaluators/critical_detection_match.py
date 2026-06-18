@@ -42,7 +42,7 @@ def _normalize_label(value):
 
 
 def perform_eval(run, example=None):
-    """Score 1 when predicted Critical/non-Critical status matches gold."""
+    """Score 1 only when both predicted and gold severity are 'critical'."""
     outputs = run["outputs"]
     reference_outputs = (example or {}).get("outputs") or run.get("reference_outputs") or {}
 
@@ -56,4 +56,4 @@ def perform_eval(run, example=None):
     predicted_is_critical = predicted_severity == "critical"
     gold_is_critical = gold_severity == "critical"
 
-    return {"critical_detection_match": int(predicted_is_critical == gold_is_critical)}
+    return {"critical_detection_match": int(predicted_is_critical and gold_is_critical)}

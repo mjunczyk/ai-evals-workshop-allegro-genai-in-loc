@@ -11,19 +11,19 @@
       "expected_score": 1
     },
     {
-      "name": "both non-critical (minor vs minor) -> match",
+      "name": "both non-critical (minor vs minor) -> mismatch",
       "predicted_severity": "minor",
       "gold_severity": "minor",
-      "expected_score": 1
+      "expected_score": 0
     },
     {
-      "name": "minor vs major are both non-critical -> match",
+      "name": "minor vs major are both non-critical -> mismatch",
       "id": "WSLQA-002",
       "source": "Set of 4 ceramic mugs",
       "target": "Sada 6 keramickych hrnku",
       "predicted_severity": "major",
       "gold_severity": "minor",
-      "expected_score": 1
+      "expected_score": 0
     },
     {
       "name": "judge over-flagged: predicted critical but gold is major",
@@ -47,7 +47,7 @@
       "name": "both values missing -> both non-critical -> match",
       "predicted_severity": null,
       "gold_severity": null,
-      "expected_score": 1
+      "expected_score": 0
     }
   ]
 }

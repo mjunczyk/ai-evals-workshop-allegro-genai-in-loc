@@ -1,5 +1,5 @@
 # Tests for critical_detection_match code evaluator
-# docs/evaluators/critical_detection_match.py — scores 1 when predicted and gold agree on whether severity is critical.
+# docs/evaluators/critical_detection_match.py — scores 1 only when BOTH predicted and gold severity are 'critical'.
 
 import pytest
 
@@ -51,16 +51,16 @@ class TestBothCritical:
 
 
 class TestBothNonCritical:
-    def test_both_minor_returns_1(self):
+    def test_both_minor_returns_0(self):
         run = make_run(make_prediction(severity="minor"))
         example = make_example(make_gold(severity="minor"))
-        assert score(run, example) == 1
+        assert score(run, example) == 0
 
-    def test_both_different_non_critical_returns_1(self):
-        # Any non-"critical" value counts as non-critical
+    def test_both_different_non_critical_returns_0(self):
+        # Neither side is critical → 0 regardless of how they compare
         run = make_run(make_prediction(severity="major"))
         example = make_example(make_gold(severity="minor"))
-        assert score(run, example) == 1
+        assert score(run, example) == 0
 
 
 class TestMismatch:
@@ -96,7 +96,7 @@ class TestNestedOutput:
     def test_prediction_nested_under_prediction_key(self):
         run = make_run(make_prediction(severity="minor", wrap="prediction"))
         example = make_example(make_gold(severity="minor"))
-        assert score(run, example) == 1
+        assert score(run, example) == 0
 
 
 class TestJsonStringInput:
@@ -106,18 +106,18 @@ class TestJsonStringInput:
         assert score(run, example) == 1
 
     def test_malformed_json_treated_as_non_critical(self):
-        # Malformed JSON → {} → no severity key → "" → non-critical
+        # Malformed JSON → {} → no severity key → "" → not critical → 0
         run = make_run("{bad json}")
         example = make_example(make_gold(severity="minor"))
-        assert score(run, example) == 1  # both non-critical → match
+        assert score(run, example) == 0
 
 
 class TestMissingKeys:
-    def test_both_severity_missing_returns_1(self):
-        # Both default to "" → both non-critical → match
+    def test_both_severity_missing_returns_0(self):
+        # Both default to "" → neither is critical → 0
         run = make_run(make_prediction())
         example = make_example(make_gold())
-        assert score(run, example) == 1
+        assert score(run, example) == 0
 
 
 class TestExampleNoneFallback:
