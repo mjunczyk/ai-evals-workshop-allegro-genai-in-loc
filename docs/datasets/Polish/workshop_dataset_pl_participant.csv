@@ -1,0 +1,13 @@
+id,workshop_use,source_language,source,target_language,target,english_support_note,suggested_accuracy_subtype,suggested_reason,participant_accuracy_subtype,participant_severity,participant_reason
+WSLQA-PL-001,live_annotation,English,"Stainless steel water bottle, 750 ml",Polish,"Butelka ze stali nierdzewnej, 750 ml","Back-translation: Stainless steel water bottle, 750 ml.",none,The target appears to preserve the source meaning.,,,
+WSLQA-PL-002,live_annotation,English,Set of 4 glasses,Polish,Zestaw 6 szklanek,Back-translation: Set of 6 glasses.,mistranslation,The quantity looks different.,,,
+WSLQA-PL-003,live_annotation,English,Wireless keyboard with backlight,Polish,Klawiatura bezprzewodowa,Back-translation: Wireless keyboard.,omission,The backlight feature seems to be missing.,,,
+WSLQA-PL-004,prepared_gold,English,Coffee machine with filter,Polish,Ekspres do kawy z filtrem i termometrem,Back-translation: Coffee machine with filter and thermometer.,addition,The target seems to add a component.,,,
+WSLQA-PL-005,prepared_gold,English,Battery charger with cable,Polish,Battery charger z kablem,"Back-translation: Battery charger with cable, with 'Battery charger' left in English.",untranslated,Part of the title remains in English.,,,
+WSLQA-PL-006,live_annotation,English,RedFox backpack,Polish,Plecak CzerwonyLis,"Back-translation: RedFox backpack, with the brand rendered literally as Red-Fox.",mistranslation,The brand meaning looks changed.,,,
+WSLQA-PL-007,live_annotation,English,"USB-C adapter, 5 V",Polish,"Adapter USB-C, 50 V","Back-translation: USB-C adapter, 50 V.",mistranslation,The voltage looks different.,,,
+WSLQA-PL-008,prepared_gold,English,"Vitamin C, 2 tablets per day",Polish,"Witamina C, 20 tabletek dziennie","Back-translation: Vitamin C, 20 tablets per day.",none,The target appears to preserve the source meaning.,,,
+WSLQA-PL-009,live_annotation,English,"Glass bottle, 1,500 ml",Polish,"Szklana butelka, 1 500 ml","Back-translation: Glass bottle, 1,500 ml. NOTE: in Polish a space is the thousands separator, so 1 500 ml equals 1,500 ml.",mistranslation,The number formatting looks changed.,,,
+WSLQA-PL-010,prepared_gold,English,Light blue cotton T-shirt,Polish,Niebieski bawełniany T-shirt,Back-translation: Blue cotton T-shirt.,omission,A shade detail seems to be missing.,,,
+WSLQA-PL-011,prepared_gold,English,"Body lotion, 200 ml",Polish,"Balsam i mydło do ciała, 200 ml","Back-translation: Body lotion and soap, 200 ml (mydło = soap).",addition,The target seems to add a product.,,,
+WSLQA-PL-012,prepared_gold,English,Box of 12 wax crayons,Polish,Opakowanie 12 kredek woskowych,Back-translation: Box of 12 wax crayons ('Box' rendered as 'Opakowanie').,mistranslation,'Box' is rendered as 'Opakowanie'.,,,

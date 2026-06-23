@@ -1,0 +1,13 @@
+id,workshop_use,source_language,source,target_language,target,gold_accuracy_subtype,gold_severity,gold_reason
+WSLQA-PL-001,live_annotation,English,"Stainless steel water bottle, 750 ml",Polish,"Butelka ze stali nierdzewnej, 750 ml",none,none,"The target preserves the product type, the material, and the volume."
+WSLQA-PL-002,live_annotation,English,Set of 4 glasses,Polish,Zestaw 6 szklanek,mistranslation,major,"The target changes the quantity from 4 to 6, which could mislead the buyer."
+WSLQA-PL-003,live_annotation,English,Wireless keyboard with backlight,Polish,Klawiatura bezprzewodowa,omission,major,"The target omits the backlight feature, a meaningful product feature present in the source."
+WSLQA-PL-004,prepared_gold,English,Coffee machine with filter,Polish,Ekspres do kawy z filtrem i termometrem,addition,major,"The target adds a thermometer, a component not present in the source."
+WSLQA-PL-005,prepared_gold,English,Battery charger with cable,Polish,Battery charger z kablem,untranslated,minor,"A translatable product phrase is left in English, but the core meaning is still understandable."
+WSLQA-PL-006,live_annotation,English,RedFox backpack,Polish,Plecak CzerwonyLis,unnecessarily_translated,major,The protected brand name RedFox is translated instead of remaining unchanged.
+WSLQA-PL-007,live_annotation,English,"USB-C adapter, 5 V",Polish,"Adapter USB-C, 50 V",mistranslation,critical,"The target states 50 V instead of 5 V, a tenfold voltage error that could damage devices or create a safety hazard."
+WSLQA-PL-008,prepared_gold,English,"Vitamin C, 2 tablets per day",Polish,"Witamina C, 20 tabletek dziennie",mistranslation,critical,"The target states 20 tablets per day instead of 2, a tenfold dosage error with a health risk."
+WSLQA-PL-009,live_annotation,English,"Glass bottle, 1,500 ml",Polish,"Szklana butelka, 1 500 ml",none,none,"The value is unchanged: Polish uses a space as the thousands separator, so 1 500 ml is identical to 1,500 ml."
+WSLQA-PL-010,prepared_gold,English,Light blue cotton T-shirt,Polish,Niebieski bawełniany T-shirt,omission,minor,"The target omits 'light', a low-impact colour detail."
+WSLQA-PL-011,prepared_gold,English,"Body lotion, 200 ml",Polish,"Balsam i mydło do ciała, 200 ml",addition,major,"The target adds 'mydło' (soap), a second product not present in the source."
+WSLQA-PL-012,prepared_gold,English,Box of 12 wax crayons,Polish,Opakowanie 12 kredek woskowych,none,none,"The target preserves quantity, product type, and material; 'Opakowanie' is an acceptable equivalent of 'Box'."
