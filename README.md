@@ -72,3 +72,4 @@ To make sure you are familiar with most of the concepts we will be discussing du
 * [GEMBA – GPT-based MT evaluation](https://arxiv.org/abs/2302.13823)
 * [MQM Error Typology](https://themqm.org/)
 * [OpenAI Evals framework](https://github.com/openai/evals)
+* [Langsmith Cookbook](https://github.com/langchain-ai/langsmith-cookbook)
