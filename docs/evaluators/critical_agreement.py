@@ -55,7 +55,12 @@ def perform_eval(run, example):
     payload = _model_payload(run)
     model_severity = _norm(payload.get("severity"))
     gold_severity = _norm(_gold(example, "gold_severity"))
-    model_is_critical = model_severity == "critical"
-    gold_is_critical = gold_severity == "critical"
-    score = 1 if (model_is_critical and gold_is_critical) else 0
+
+    if gold_severity != "critical":
+        return {"critical_agreement": None}
+
+    if not model_severity:
+        return {"critical_agreement": 0}
+
+    score = 1 if model_severity == "critical" else 0
     return {"critical_agreement": score}
