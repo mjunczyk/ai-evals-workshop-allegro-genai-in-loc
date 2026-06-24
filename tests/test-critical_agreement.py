@@ -70,15 +70,15 @@ class TestJsonStringInput:
 
 
 class TestMissingKeys:
-    def test_both_severity_missing_returns_0(self):
+    def test_both_severity_missing_returns_none(self):
         run = make_run(make_prediction())
         example = make_example(make_gold())
-        assert score(run, example) == 0
+        assert score(run, example) is None
 
 
 class TestExampleNone:
-    def test_example_none_returns_0_even_if_reference_outputs_exist(self):
+    def test_example_none_returns_none_even_if_reference_outputs_exist(self):
         # This evaluator does not read run["reference_outputs"].
         gold = make_gold(severity="critical")
         run = make_run(make_prediction(severity="critical"), reference_outputs=gold)
-        assert score(run, example=None) == 0
+        assert score(run, example=None) is None

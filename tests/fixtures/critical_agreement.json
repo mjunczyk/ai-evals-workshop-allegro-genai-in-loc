@@ -8,16 +8,16 @@
       "expected_score": 1
     },
     {
-      "name": "both non-critical -> 0",
+      "name": "both non-critical -> None",
       "predicted_severity": "minor",
       "gold_severity": "minor",
-      "expected_score": 0
+      "expected_score": null
     },
     {
-      "name": "predicted critical, gold major -> 0",
+      "name": "predicted critical, gold major -> None",
       "predicted_severity": "critical",
       "gold_severity": "major",
-      "expected_score": 0
+      "expected_score": null
     },
     {
       "name": "predicted major, gold critical -> 0",
@@ -38,10 +38,10 @@
       "expected_score": 1
     },
     {
-      "name": "both missing -> 0",
+      "name": "both missing -> None",
       "predicted_severity": null,
       "gold_severity": null,
-      "expected_score": 0
+      "expected_score": null
     }
   ]
 }
